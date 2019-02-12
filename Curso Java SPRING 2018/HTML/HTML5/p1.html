@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P1</title>
+        <meta charset="UTF-8">      
+    </head>
+    <body>
+    	<form action="resultado.html">
+    		<label for="user">Usuario</label>
+    		<input type="email" name="user" id="user" required="required" autofocus="autofocus" placeholder="Mail de usuario">
+    		<br>
+    		<label for="pass">Contraseña</label>
+    		<input type="password" name="pass" id="pass" maxlength="4" required="required" placeholder="Contraseña de usuario">
+    		<br>
+    		<label for="age">Edad</label>
+    		<input type="number" name="age" id="age" min="18" max="99" required="required">
+    		<br>
+    		<label for="photo">Foto</label>
+    		<input type="file" name="photo" id="photo" accept="image/png, image/jpg" multiple="multiple">
+    		<br>
+    		<input type="checkbox" name="remember" id="remember" checked="checked">
+    		<label for="remember">Recordar usuario</label>
+    		<br>
+    		<label for="type">Tipo</label>
+    		<input type="text" name="type" id="type" list="tipos" placeholder="Seleccione tipo de usuario" size="25">
+    		<datalist id="tipos">
+    			<option value="1">Admin</option>
+    			<option value="2">Usuario</option>
+    		</datalist>	
+    		<br>
+    		<label for="date">Fecha</label>
+    		<input type="date" name="date" id="date" min="2016-09-01" value="2018-05-23">
+    		<br>
+    		<input type="submit" value="Guardar">
+    	</form>
+    </body>
+</html>

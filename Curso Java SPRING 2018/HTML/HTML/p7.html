@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P7</title>
+        <meta charset="UTF-8">      
+    </head>
+    <body>
+    	<form action="resultado.html">
+    		<input type="hidden" name="id" value="17">
+    		<label for="user">Usuario</label>
+    		<input type="text" name="user" id="user">
+    		<br>
+    		<label for="pass">Contraseña</label>
+    		<input type="password" name="pass" id="pass" maxlength="4">
+    		<br>
+    		<label for="photo">Foto</label>
+    		<input type="file" name="photo" id="photo" accept="image/png">
+    		<br>
+    		<input type="checkbox" name="remember" id="remember" checked="checked">
+    		<label for="remember">Recordar usuario</label>
+    		<br>
+    		<label for="type">Tipo</label>
+    		<select name="type" id="type">
+    			<option value="1">Admin</option>
+    			<option value="2" selected="selected">Usuario</option>
+    		</select>
+    		<br>
+    		<input type="submit" value="Login">
+    	</form>
+    </body>
+</html>

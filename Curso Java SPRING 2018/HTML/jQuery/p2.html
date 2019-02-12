@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P2</title>
+        <meta charset="UTF-8">  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/
+jquery.min.js"></script>     
+        <script>
+        	var activado = true;
+        	
+        	$(function() {
+        		mouse(false);
+        		/*$('img').mouseenter(function() {
+						mouse(true);
+				});
+				$('img').mouseleave(function() {
+						mouse(false);
+				});*/
+				/*$('img').on("mouseenter", function() {
+						mouse(true);
+				});
+				$('img').on("mouseleave", function() {
+						mouse(false);
+				});*/
+				$('img').on({
+					mouseenter: function() {
+						mouse(true);
+					},
+					mouseleave: function() {
+						mouse(false);
+					}	
+				});
+			});
+			        	
+        	function activar(){
+        		activado=!activado;
+        		if (activado) {
+        			document.getElementById("link").innerHTML = "Off";
+        		}else{
+        			document.getElementById("link").innerHTML = "On";
+        		}
+        	}
+        	
+        	function mouse(mouseIn){
+        		if (activado){
+        			if (mouseIn) {
+        				$("#resultado1").html("Dentro");
+        			}else{
+        				$("#resultado1").html("Fuera");
+        			}
+        		}
+        	}        	
+        </script>
+    </head>
+    <body>
+    	<p id="resultado1"></p>
+    	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/128px-HTML5_logo_and_wordmark.svg.png" 
+			alt="Logo">
+		<br>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/128px-HTML5_logo_and_wordmark.svg.png" 
+			alt="Logo">
+		<br>
+		<a href="javascript:activar()" id="link">Off</a>
+    </body>
+</html>

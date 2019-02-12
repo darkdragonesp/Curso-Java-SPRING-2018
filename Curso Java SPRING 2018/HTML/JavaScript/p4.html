@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P4</title>
+        <meta charset="UTF-8">      
+        <script>
+        	var activado = true;
+        	function activar(){
+        		activado=!activado;
+        		if (activado) {
+        			document.getElementById("link").innerHTML = "Off";
+        		}else{
+        			document.getElementById("link").innerHTML = "On";
+        		}
+        	}
+        	
+        	function mouse(mouseIn){
+        		if (activado){
+        			if (mouseIn) {
+        				document.getElementById("resultado1").innerHTML = "Dentro";
+        			}else{
+        				document.getElementById("resultado1").innerHTML = "Fuera";
+        			}
+        		}
+        	}
+        </script>
+    </head>
+    <body>
+    	<p id="resultado1"></p>
+    	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/128px-HTML5_logo_and_wordmark.svg.png" 
+			alt="Logo" onmouseover="mouse(true)" onmouseout="mouse(false)">
+		<br>
+		<a href="javascript:activar()" id="link">Off</a>
+    	<script>
+    		mouse(false);
+    	</script>    	
+    </body>
+</html>

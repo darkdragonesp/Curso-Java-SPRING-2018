@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P5</title>
+        <meta charset="UTF-8">              
+    </head>
+    <body>
+    	<p id="resultado1"></p>
+    	<p id="resultado2"></p>
+    	<p id="resultado3"></p>
+    	<p id="resultado4"></p>
+    	<p id="resultado5"></p>
+    	<p id="resultado6"></p>
+    	<script>
+    		var items = ["Juan", "Alejandro", "Fran", "Javier", "Ana"];
+    		document.getElementById("resultado1").innerHTML = items.toString();
+    		items.sort();
+    		document.getElementById("resultado2").innerHTML = items.toString();
+    		items.splice(2, 1);
+    		document.getElementById("resultado3").innerHTML = items.toString();
+    		items.unshift("Carmen");
+    		document.getElementById("resultado4").innerHTML = items.toString();
+    		items.push("Claudio");
+    		document.getElementById("resultado5").innerHTML = items.toString();
+    		items.sort(
+    			function(a, b){
+    				return a.length - b.length;
+    			});
+    		document.getElementById("resultado6").innerHTML = items.toString();
+    	</script>  
+    </body>
+</html>

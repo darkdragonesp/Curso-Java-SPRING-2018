@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P4</title>
+        <meta charset="UTF-8">      
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/
+jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+    	<script>
+    		$(function() {
+				$("#fechal").datepicker({
+           			dateFormat: "dd/mm/yy", //formato de salida
+           			onSelect: function(dateText) {
+           				$('#enlace').html(dateText);
+           				let day = dateText.substring(0, 2);
+           				day = parseInt(day);
+           				$('#enlace').attr('href',
+           					"https://jsonplaceholder.typicode.com/posts/" + day);
+					} 
+				});
+				$("#fecha").datepicker({
+           			dateFormat: "d", //formato de salida
+           			onSelect: function(dateText) {
+           				getTip(dateText);
+					} 
+				});
+			});
+			
+			function getTip(day) {
+				$.ajax({
+					url: "https://jsonplaceholder.typicode.com/posts/" + day,
+					method: "GET",
+					contentType : "application/json",
+					timeout : 2000,
+					success: function(result){
+						$('h1').html(result.title);
+						$('h2').html(result.body);
+					},
+					error: function(result){
+						$('h1').html("No hay consejo para ese día");
+					}
+				});
+			}
+        </script>
+    </head>
+    <body>
+    	<div id="fechal"></div>
+    	<a id="enlace" target="_blank"></a>
+    	<br>
+    	<br>
+    	<div id="fecha"></div>
+    	<h1></h1>
+    	<h2></h2>
+    </body>
+</html>

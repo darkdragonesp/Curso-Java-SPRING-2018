@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P1</title>
+        <meta charset="UTF-8">   
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/
+jquery.min.js"></script>   
+        <script>
+        	function calcular(x, y) {
+        		return x % y;
+        	}
+			$(function() {
+				$('#calcular').click(function(){
+					let res = calcular($('#x').val(), $('#y').val());
+					$('#resultado1').html(res);
+				});
+			});
+        </script>
+    </head>
+    <body>
+    	<p id="resultado1"></p>
+    	<form>
+    		X<input type="text" id="x">
+    		Y<input type="text" id="y">
+    		<input type="button" value="Calcular" id="calcular">
+    	</form>
+    </body>
+</html>

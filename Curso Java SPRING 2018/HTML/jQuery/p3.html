@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P3</title>
+        <meta charset="UTF-8">      
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/
+jquery.min.js"></script>
+        <script>
+			$(function() {
+				$('#mostrar').click(function(){
+					$('#resultado1').css('display', 'none');
+					$('#resultado1').html($('#texto').val());
+					let ms = $('#ms').val()*1000;
+					$('#resultado1').slideDown(
+						ms,
+						function() {
+							$(this).fadeOut(ms);
+						});
+				});
+			});
+        </script>
+    </head>
+    <body>
+    	<div id="resultado1"></div>
+    	<form>
+    		Segundos<input type="number" id="ms" value="2">
+    		Texto<input type="text" id="texto" value="Hola">
+    		<input type="button" value="Ocultar"
+    			onclick="$(this).hide()">
+    		<input type="button" value="Mostrar" id="mostrar">
+    	</form>
+    </body>
+</html>

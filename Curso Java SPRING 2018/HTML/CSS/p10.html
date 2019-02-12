@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P10</title>
+        <meta charset="UTF-8">  
+        <style>
+        	input[type="text"], textarea {
+    			width: 100%;
+    			padding: 12px;
+   				border: 1px solid #ccc;
+    			border-radius: 4px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			box-sizing: border-box;
+			}
+
+			label {
+    			padding: 12px 12px 0 0;
+    			display: inline-block;
+			}
+			
+			textarea {
+				height:200px;	
+			}
+
+			input[type="submit"] {
+    			background-color: #00008b;
+    			color: white;
+    			padding: 12px 20px;
+    			border: none;
+    			border-radius: 4px;
+    			float: right;
+			}
+
+			input[type="submit"]:hover {
+    			background-color: #00009f;
+			}
+			
+			input[type="text"]:focus, textarea:focus {
+				outline: 2px solid red;
+			}
+			
+			form:after {
+    			content: "";
+    			display: table;
+    			clear: both;
+			}
+			
+			.content {
+    			border-radius: 5px;
+    			background-color: #c0c0c0;
+    			padding: 20px;
+			}
+			
+        </style>      
+    </head>
+    <body>
+    	<div class="content">    		
+    		<form action="/action_page.php">
+    				<label for="nombre">Nombre</label>
+        			<input type="text" id="nombre" name="nombre">
+    				<label for="apellidos">Apellidos</label>
+			        <input type="text" id="apellidos" name="apellidos">
+			        <label for="descripcion">Descripción</label>
+			        <textarea id="descripcion" name="descripcion"></textarea>
+			      <input type="submit" value="Enviar">
+			  </form>
+    	</div>
+    </body>
+</html>

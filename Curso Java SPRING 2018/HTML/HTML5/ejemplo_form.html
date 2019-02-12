@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Componentes de formularios</title>
+        <meta charset="UTF-8">
+        <style>
+        	form label {display:block;}
+        </style>
+    </head>
+    <body>
+        <form>
+            <label>
+            	Rango (1 a 10)
+            	<input name="form_number" id="form_number" type="number" min="1" max="10" >
+        	</label>
+        	<label>
+            	Fecha estándar
+            	<input name="form_date" id="form_date" type="date">
+            </label>	
+            <label>
+            	Fecha (mes)
+            	<input name="form_month" id="form_month" type="month">
+        	</label>
+        	<label>
+            	Fecha (semana)
+            	<input name="form_week" id="form_week" type="week">
+        	</label>
+        	<label>
+            	Hora
+            	<input name="form_time" id="form_time" type="time">
+            </label>
+            <label>
+            	URL
+            	<input name="form_url" id="form_url" type="url" list="url_list">            
+            	<datalist id="url_list">
+                	<option value="http://www.google.com" label="Google">
+                	<option value="http://www.hubiqus.es" label="Hubiqus">
+            	</datalist>
+        	</label>
+        	<label>
+            	E-mail
+            	<input name="form_email" id="form_email" type="email" list="email_list" multiple>
+            	<datalist id="email_list">
+                	<option value="ajurado@hubiqus.es" label="CTO">
+                	<option value="soporte@hubiqus.es" label="Soporte">
+            	</datalist>
+            </label>
+            <label>
+            	Teléfono
+            	<input name="form_telephone" id="form_telephone" type="tel">
+            </label>
+            <label>
+            	Selector de color
+            	<input name="form_color" id="form_color" type="color">
+            </label>
+            <label>
+                Archivos:
+                <input type="file" multiple name="att">
+            </label>
+            <label>
+            	Rango
+            	<input name="x" type="range" min="100" max="700" step="9.09090909" value="509.090909">
+			</label>
+        </form>
+    </body>
+</html>

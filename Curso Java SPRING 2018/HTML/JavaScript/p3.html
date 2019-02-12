@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P3</title>
+        <meta charset="UTF-8">      
+        <script>
+        	function modulo(x, y){
+        		document.getElementById("resultado1").innerHTML = x % y;
+        	}
+        </script>
+    </head>
+    <body>
+    	<p id="resultado1"></p>
+    	<script>
+    		modulo(135, 12);
+    	</script>
+    	<form>
+    		X<input type="text" id="x">
+    		Y<input type="text" id="y">
+    		<input type="button" value="Calcular"
+    			onclick="modulo(document.getElementById('x').value,
+    							document.getElementById('y').value)">
+    	</form>
+    </body>
+</html>

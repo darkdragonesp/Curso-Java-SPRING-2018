@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>P9</title>
+        <meta charset="UTF-8">  
+        <style>
+        	img {
+        		opacity: 1;
+        		width: 120px;
+        	}
+        	img:hover {
+        		opacity: 0.2;
+        		z-index: -2;
+        	}
+        	.imgv {
+    			display: block;
+    			margin: auto;    			
+			}
+			.imgc {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			.content {
+				position: relative;
+				width: 120px;
+				margin: auto;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			.texto {		
+				position: absolute;
+    			top: 6px;
+   	 			right: 6px;
+    			font-size: 18px;
+    			z-index: -1;
+			}
+        </style>      
+    </head>
+    <body>
+    	<div class="content">    		
+    		<span class="texto">Texto</span>
+    		<img src="html-css.jpg" class="imgv">
+    	</div>
+    	<img src="html-css.jpg" class="imgc">
+    </body>
+</html>

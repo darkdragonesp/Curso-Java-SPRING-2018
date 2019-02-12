@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Geolocalización</title>
+        <meta charset="UTF-8">
+        <script>
+            function localizacion() {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var latitud = position.coords.latitude;
+                    var longitud = position.coords.longitude;
+                    alert("Tus coordenadas son: (" + latitud + "," + longitud + ")");
+                });
+            }
+            
+        </script>
+    </head>
+    <body>        
+        <a href="javascript:localizacion();">Mostrar Posición</a>
+    </body>
+</html>
